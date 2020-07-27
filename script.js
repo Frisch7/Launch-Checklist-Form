@@ -72,7 +72,9 @@ function updateLaunchStatus(){
    if(fuelLevel.value > 10000 && cargoMass.value < 10000){
       launchStatus.innerHTML = "Shuttle is ready for launch"; 
       launchStatus.style.color = "green";
-      faultyItems.style.visibility = "hidden";
+      faultyItems.style.visibility = "visible";
+      document.getElementById("cargoStatus").innerHTML = "Cargo mass low enough for launch"; 
+      document.getElementById("fuelStatus").innerHTML = "Fuel level high enough for launch"; 
    }
    event.preventDefault();
 }
